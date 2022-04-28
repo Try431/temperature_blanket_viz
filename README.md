@@ -8,18 +8,18 @@ The code will by default use the daily high temperature for the color generation
 ## Requirements
 
 ```
-python -m venv .env
-source .env/bin/activate
-pip install -r requirements.txt
+$ python -m venv .env
+$ source .env/bin/activate
+$ pip install -r requirements.txt
 ```
 
 ## Running
 
 ```
-python temp_blanket_viz.py           # defaults to high
-python temp_blanket_viz.py high      # use daily highs
-python temp_blanket_viz.py low       # use daily lows
-python temp_blanket_viz.py both      # layer in both
+$ python temp_blanket_viz.py           # defaults to high
+$ python temp_blanket_viz.py high      # use daily highs
+$ python temp_blanket_viz.py low       # use daily lows
+$ python temp_blanket_viz.py both      # layer in both
 ```
 
 ## Viewing
