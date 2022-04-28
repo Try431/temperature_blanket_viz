@@ -38,4 +38,6 @@ Get a Weather API key by signing up at https://www.visualcrossing.com/sign-up (i
 
 Weather History API docs: https://www.visualcrossing.com/resources/documentation/weather-api/weather-api-documentation/#history
 
-*Do note that there's a limit of 1000 records being requested per day, which is why the data is written to a local JSON file and the API is called only if that JSON file doesn't exist*
+*Do note that there's a limit of 1000 records being requested per day - meaning that you can only make two queries for a full-year's worth of data per day, at least with the free tier*
+
+*This is why the data is written to a local JSON file and the API is called only if that JSON file doesn't exist.*
