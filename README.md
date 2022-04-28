@@ -5,13 +5,16 @@ Just something I threw together on a whim. Grabs temperature data for a specifie
 
 The code will by default use the daily high temperature for the color generation.
 
-## Requirements
+## Requirements/Setup
 
+To install local dependencies:
 ```
 $ python -m venv .env
 $ source .env/bin/activate
 $ pip install -r requirements.txt
 ```
+
+Inside the `temp_blanket_viz.py` code itself, there are variables for setting your weather API key (see Notes), your zip code, the desired colors (in hex format), and your start/end dates for the historical data you want to grab.
 
 ## Running
 
@@ -35,3 +38,4 @@ Get a Weather API key by signing up at https://www.visualcrossing.com/sign-up (i
 
 Weather History API docs: https://www.visualcrossing.com/resources/documentation/weather-api/weather-api-documentation/#history
 
+*Do note that there's a limit of 1000 records being requested per day, which is why the data is written to a local JSON file and the API is called only if that JSON file doesn't exist*

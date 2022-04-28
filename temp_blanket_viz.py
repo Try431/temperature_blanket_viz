@@ -11,7 +11,9 @@ WEATHER_API_KEY = "INSERT_YOUR_API_KEY_HERE"
 START_DATE = "2021-01-01"
 END_DATE = "2021-12-31"
 
-WEATHER_ENDPOINT = f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/78741/{START_DATE}/{END_DATE}?unitGroup=us&elements=datetime%2Ctempmax%2Ctempmin%2Ctemp&include=days&key={WEATHER_API_KEY}&contentType=json"
+ZIP_CODE = "INSERT_YOUR_ZIP_CODE_HERE"
+
+WEATHER_ENDPOINT = f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{ZIP_CODE}/{START_DATE}/{END_DATE}?unitGroup=us&elements=datetime%2Ctempmax%2Ctempmin%2Ctemp&include=days&key={WEATHER_API_KEY}&contentType=json"
 
 # note - lower indices will correspond to lower temperatures
 DESIRED_COLORS = ["#F700FF",
