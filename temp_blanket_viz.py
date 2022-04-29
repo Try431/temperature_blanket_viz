@@ -36,7 +36,7 @@ def write_weather_data_to_file():
     print(resp.status_code)
     data = json.loads(resp.text)
     with open("./temp_data.json", "w") as f:
-        f.write(data)
+        json.dump(data, f)
 
 
 def generate_temp_bins(temp_data):
