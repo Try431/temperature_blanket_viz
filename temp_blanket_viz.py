@@ -98,20 +98,20 @@ def visualize_color_pattern(color_mapping, viz_param):
 
     with open("color.html", "w") as f:
         f.write("<html>\n")
-        f.write("<div style='overflow-x: scroll;width:35000'>\n")
+        f.write("<div style='overflow-x: scroll;width:14600;display:flex'>\n")
         for day in sorted(color_mapping.keys()):
             high_color_ind = color_mapping.get(day).get("high_color")
             high_color = DESIRED_COLORS[high_color_ind]
             low_color_ind = color_mapping.get(day).get("low_color")
             low_color = DESIRED_COLORS[low_color_ind]
-            high_color_rect = f'<rect width="40" height="3200" style="fill:{high_color}" />\n'
-            low_color_rect = f'<rect width="40" height="3200" style="fill:{low_color}" />\n'
+            high_color_rect = f'<rect width="20" height="1200" style="fill:{high_color}"/>\n'
+            low_color_rect = f'<rect width="20" height="1200" style="fill:{low_color}"/>\n'
             if viz_param in ["high", "both"]:
-                f.write('<svg width="40" height="3200">\n')
+                f.write('<svg width="20" height="1200">\n')
                 f.write(f"{day} HIGH -- {high_color_rect}")
                 f.write("</svg>\n")
             if viz_param in ["low", "both"]:
-                f.write('<svg width="40" height="3200">\n')
+                f.write('<svg width="20" height="1200">\n')
                 f.write(f"{day} LOW -- {low_color_rect}")
                 f.write("</svg>\n")
         f.write("</div>\n")
